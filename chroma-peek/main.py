@@ -15,16 +15,28 @@ def get_cli_path():
 
 cli_path = get_cli_path()
 
-st.set_page_config(page_title="chroma-peek", page_icon="👀")
+st.set_page_config(
+    page_title="chroma-peek", 
+    page_icon="👀",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
 
 ## styles ##
-padding = 100
 st.markdown(""" <style>
             #MainMenu {
                 visibility: hidden;
             }
             footer {
                 visibility: hidden;
+            }
+            .main .block-container {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                max-width: 100%;
+            }
+            .stApp {
+                max-width: 100%;
             }
             </style> """, 
             unsafe_allow_html=True)
