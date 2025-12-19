@@ -22,16 +22,30 @@ Follow these steps to get started:
    git clone https://github.com/Pawandeep-prog/chroma-peek.git
    ```
 
-2. **Install Requirements:**
+2. **Install Requirements using uv:**
 
+   ```shell
+   uv sync
+   ```
+
+   Or if you prefer pip (legacy):
    ```shell
    pip install -r requirements.txt
    ```
 
 3. **Run the App:**
+   
+   Without command-line argument (enter path in UI):
    ```shell
-   streamlit run chroma-peek/main.py
+   uv run streamlit run chroma-peek/main.py
    ```
+   
+   With command-line argument (pre-fill the path):
+   ```shell
+   uv run streamlit run chroma-peek/main.py -- --path /path/to/chromadb/persist/directory
+   ```
+   
+   **Note**: Use `--` to separate Streamlit arguments from your script arguments.
 
 ## Samples
 
